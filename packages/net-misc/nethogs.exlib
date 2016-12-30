@@ -1,0 +1,23 @@
+# Copyright 2016 Marius Orcsik <marius@littr.me>
+# Distributed under the terms of the GNU General Public License v2
+
+require github [ user= raboof ]
+
+SUMMARY="A net top tool which displays traffic used per process instead of per IP or interface"
+HOMEPAGE="https://github.com/raboof/nethogs"
+
+DOWNLOADS="${HOMEPAGE}/releases/v${PNV}.tar.gz"
+
+LICENCES="GPL2"
+SLOT="0"
+MYOPTIONS=""
+
+DEPENDENCIES="
+    build+run:
+        dev-libs/libpcap[>=1.8]
+        sys-libs/ncurses[>=5.3]
+"
+
+src_install() {
+    default
+}
